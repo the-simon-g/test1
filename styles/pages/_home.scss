@@ -1,0 +1,28 @@
+.cover {
+  @include display;
+
+  background-color: map-get($grey-levels, light);
+  text-align: center;
+
+  p {
+    padding-bottom: 0.6em;
+    font-weight: 300;
+  }
+
+  a {
+    width: unset;
+  }
+}
+
+section.section--highlighted {
+  background-color: map-get($grey-levels, light);
+
+  > * {
+    @include slidingInElement(
+      $iterations: 5,
+      $delay: 3,
+      $exceptionSelector: "h2",
+      $exceptionDuration: 1.5s
+    );
+  }
+}

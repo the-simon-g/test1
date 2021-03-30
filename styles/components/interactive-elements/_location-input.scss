@@ -1,0 +1,67 @@
+.location {
+  height: 50px;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: map-get($grey-levels, dark);
+  background-color: map-get($grey-levels, medium-light);
+
+  .map-icon {
+    display: inline-block;
+    margin-right: 14px;
+    width: 14px;
+  }
+
+  button {
+    display: none;
+  }
+
+  input {
+    color: black;
+    background-color: #ffffff00;
+    border: none;
+    width: 115px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+}
+
+.location:focus-within {
+  // /!\ Browser performances
+
+  .map-icon {
+    display: none;
+  }
+
+  button {
+    display: inline;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 14px;
+    border: none;
+    background-color: inherit;
+    animation: inflate 250ms ease 0s forwards normal;
+  }
+
+  input {
+    padding: 7px 15px;
+    border-bottom: 2px solid $color-secondary;
+    width: 200px;
+    background-color: #ffffff80;
+
+    &::placeholder {
+      opacity: 0.4;
+    }
+  }
+}

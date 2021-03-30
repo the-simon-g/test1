@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Le Gourmand</title>
+
+    <base href="index.html" />
+    <link rel="stylesheet" type="text/css" href="styles/style.min.css" />
+    <script src="https://kit.fontawesome.com/949298e37f.js" ></script>
+
+    <meta charset="UTF-8" />
+    <meta name="title" content="ohmyfood" />
+    <meta name="description" content="Le Gourmand" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, " />
+</head>
+
+<body>
+    <header class="page-header">
+        <a href="index.html">
+            <span class="back-to-homepage">
+                <i class="fas fa-arrow-left"></i>
+            </span>
+            <span class="logo">ohmyfood</span>
+        </a>
+    </header>
+
+    <main>
+        <header class="restaurant-header">
+            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+            <div class="title">
+                <h1 id="main-content">Le Gourmand</h1>
+                <div class="like-button">
+                    <input id="le-gourmand" type="checkbox" >
+                     <label for="le-gourmand">
+                        <i class="fas fa-heart"></i>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <form class="menu-select" method="POST">
+            <h2>ENTREES</h2>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="ent1" type="checkbox" value="ent1"
+                        name="entrees" />
+                    <div class="card-label__title">
+                        <h3>
+                            Tuna Carpaccio  
+                        </h3>
+                        <p>Seasoned with yuzu</p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">25€</span>
+                        <label class="select-button" for="ent1">
+                            <i class="fas fa-check-circle"></i>
+                        </label>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="ent2" type="checkbox" value="ent2" name="entrees" />
+                    <div class="card-label__title">
+                        <h3>
+                            Crunchy Lobster Croquets
+                        </h3>
+                        <p>With Seasonal Vegetables</p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">25€</span>
+                        <label class="select-button" for="ent2">
+                            <i  class="fas fa-check-circle"></i>
+                        </label>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="ent3" type="checkbox" value="ent3"
+                        name="entrees" />
+                    <div class="card-label__title">
+                        <h3>
+                            Mushroom Soup
+                        </h3>
+                        <p>With Truffles</p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">20€</span>
+                        <label class="select-button" for="ent3">
+                            <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </article>
+
+            <h2>MAIN DISHES</h2>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="main1" type="checkbox" value="main1"
+                        name="plats" />
+                    <div class="card-label__title">
+                        <h3>
+                            Roast Chicken with Provincal herbs
+                        </h3>
+                        <p>With Truffle Cream
+                        </p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">40€</span>
+                        <label class="select-button" for="main1">
+                            <i class="fas fa-check-circle"></i>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="main2" type="checkbox"
+                        value="main2" name="plats" />
+                    <div class="card-label__title">
+                        <h3>
+                            Roasted Lobster
+                        </h3>
+                        <p>With Seasonal Vegetables
+                        </p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">35€</span>
+                        <label class="select-button" for="main2">
+                            <i class="fas fa-check-circle"></i>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="main3" type="checkbox" value="main3"
+                        name="plats" />
+                    <div class="card-label__title">
+                        <h3>
+                            Angus Beef Ribs
+                        </h3>
+                        <p>with mashed Parsnips
+                        </p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">44€</span>
+                        <label class="select-button" for="main3">
+                            <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </article>
+
+            <h2>DESSERTS</h2>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="dessert1" type="checkbox" value="dessert1" name="desserts" />
+                    <div class="card-label__title">
+                        <h3>
+                            Assorted Dessert Plate
+                        </h3>
+                        <p>Chef's Choice</p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">18€</span>
+                        <label class="select-button" for="dessert1">
+                            <i class="fas fa-check-circle"></i>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="dessert2" type="checkbox" value="dessert2"
+                        name="desserts" />
+                    <div class="card-label__title">
+                        <h3>
+                            Creme Brulee
+                        </h3>
+                        <p>Revisted
+                        </p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">22€</span>
+                        <label class="select-button" for="dessert2">
+                            <i class="fas fa-check-circle"></i>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="dessert3" type="checkbox" value="dessert3"
+                        name="desserts" />
+                    <div class="card-label__title">
+                        <h3>
+                            Tiramissu
+                        </h3>
+                        <p>With hazelnuts
+                        </p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">23€</span>
+                        <label class="select-button" for="dessert3">
+                            <i class="fas fa-check-circle"></i>
+
+                    </div>
+                </div>
+            </article>
+
+            <button class="button">Order</button>
+        </form>
+    </main>
+
+    <footer>
+        <nav>
+            <h2>ohmyfood</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-utensils"></i>
+                        Suggest a restaurant
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-hands-helping"></i>
+                        Become a partner
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-hands-helping"></i>
+                        Legal</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

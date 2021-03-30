@@ -1,0 +1,28 @@
+.loader-container {
+  position: fixed;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #fffd;
+
+  animation-name: fadingout;
+  animation-delay: 3s;
+  animation-duration: 350ms;
+  animation-fill-mode: both;
+}
+
+.loader {
+  font-size: 50px;
+  color: $color-primary;
+
+  animation-name: loader;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-duration: 625ms;
+}

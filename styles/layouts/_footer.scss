@@ -1,0 +1,43 @@
+/* FOOTER */
+
+footer {
+  @include display;
+
+  padding-top: 28px;
+  padding-bottom: 28px;
+
+  background-color: map-get($grey-levels, dark);
+  color: white;
+
+  h2 {
+    font-family: "Shrikhand", "Roboto", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+  }
+
+  ul {
+    padding: 0px;
+    margin: 0px;
+
+    font-size: 15px;
+
+    li {
+      line-height: 1.9;
+
+      a {
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+        i {
+          width: 25px;
+          font-size: 13px;
+        }
+
+        &:hover,
+        &:focus {
+          opacity: 0.7;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

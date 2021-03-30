@@ -1,0 +1,10 @@
+.new-label {
+  position: absolute;
+  font-size: 14px;
+  right: 12px;
+  top: 15px;
+  background-color: $color-tertiary;
+  color: darken($color-tertiary, 40%);
+  padding: 8px 13px 7px;
+  border-radius: 2px;
+}

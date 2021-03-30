@@ -1,0 +1,52 @@
+.button {
+  @include shadows();
+
+  cursor: pointer;
+
+  z-index: 1;
+  position: relative;
+
+  padding: 15px 22px;
+  border-radius: 30px;
+  border: none;
+
+  font-weight: 500;
+  font-size: 15px;
+
+  color: white;
+
+  background: $color-primary;
+  background: $gradient-primary;
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
+
+  &::after {
+    content: "";
+
+    opacity: 0;
+    transition: opacity 600ms ease;
+
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    border-radius: 30px;
+
+    background: $color-secondary;
+    background: $gradient-secondary;
+  }
+
+  &:visited {
+    color: white;
+  }
+
+  &:focus {
+    outline-color: black;
+  }
+}

@@ -1,0 +1,172 @@
+.menu-select article.card {
+  @include shadows();
+
+  margin-bottom: 0;
+  overflow: hidden;
+
+  &:focus-within {
+    outline: 1px dotted black;
+  }
+
+  .card-label {
+    flex-direction: row;
+    align-items: flex-end;
+
+    position: relative;
+    height: 82px;
+
+    &__title,
+    &__price {
+      margin: 15px 23px 16px 11px;
+    }
+
+    &__title h3 i {
+      color: $color-tertiary;
+      font-size: 16px;
+      margin-left: 5px;
+    }
+  }
+}
+
+input.select-button {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+label.select-button {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  height: 82px;
+  width: 60px;
+
+  background-color: $color-tertiary;
+
+  i {
+    border-radius: 100px;
+    font-size: 22px;
+    color: white;
+  }
+}
+
+// ANIMATIONS
+
+// Transitions
+.menu-select {
+  .card-label__right-side {
+    transition: transform 350ms ease;
+  }
+  h3 i {
+    transition: transform 350ms cubic-bezier(0.1, 1, 0.6, 1.3);
+  }
+  .card-label__price,
+  .card-label__price::after {
+    transition: transform 800ms;
+  }
+  label i {
+    transition: transform 1s cubic-bezier(0.1, 1, 0.6, 1.2) 230ms,
+      border 100ms ease-in-out, box-shadow 100ms ease-in-out 50ms;
+  }
+}
+
+// Card fading in
+.menu-select > * {
+  @include slidingInElement(
+    $iterations: 13,
+    $exceptionSelector: "article",
+    $exceptionDuration: 0.5s
+  );
+}
+
+// Card hover
+.menu-select .card-label {
+  //Initial
+  .card-label__right-side {
+    display: flex;
+    align-items: flex-end;
+
+    transform: translate(60px);
+  }
+
+  //Effect
+  &:hover .card-label__right-side {
+    // When we start using JavaScript, we can display `.card-label__right-side` on keyboard navigating only focus.
+    transform: translate(0px);
+
+    label i {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+// Card checked
+.menu-select article {
+  //Initial
+  .card-label {
+    h3 i {
+      transform: scale(0);
+    }
+
+    .card-label__price {
+      transform: translateY(6px);
+
+      &::after {
+        content: "";
+        display: block;
+        height: 6px;
+        width: 100%;
+        margin-top: 2px;
+        background-color: $color-tertiary;
+
+        transform: scaleY(0);
+      }
+    }
+
+    label i {
+      box-shadow: unset;
+      border: 0;
+    }
+  }
+
+  //Effects
+  input.select-button:checked + .card-label__title {
+    h3 i {
+      transform: scale(1);
+    }
+
+    + .card-label__right-side {
+      .card-label__price {
+        transform: translateY(0px);
+        &::after {
+          transform: scaleY(1);
+        }
+      }
+      label i {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); // /!\ Browser performances
+        border: 3px transparentize(#ffffff, 0.5) solid; // /!\ Browser performances
+      }
+    }
+  }
+}
+
+/* //This will simplify the animation when it is implemented 
+  &:has(input:checked) {
+    width: 100%;
+  }
+  */
+
+// Targeting Internet Explorer
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  input.select-button {
+    opacity: 1;
+    left: inherit;
+    right: 5px;
+    bottom: 20px;
+    z-index: 1;
+  }
+}

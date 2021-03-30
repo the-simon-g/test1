@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bastille</title>
+
+    <base href="index.html" />
+    <link rel="stylesheet" type="text/css" href="styles/style.min.css" />
+    <script src="https://kit.fontawesome.com/949298e37f.js" ></script>
+
+    <meta charset="UTF-8" />
+    <meta name="title" content="ohmyfood" />
+    <meta name="description" content="Bastille" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, " />
+</head>
+
+<body>
+    <header class="page-header">
+        <a href="index.html">
+            <span class="back-to-homepage">
+                <i class="fas fa-arrow-left"></i>
+            </span>
+            <span class="logo">ohmyfood</span>
+        </a>
+    </header>
+
+    <main>
+        <header class="restaurant-header">
+            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+            <div class="title">
+                <h1 id="main-content">Bastille</h1>
+                <div class="like-button">
+                    <input id="bastille" type="checkbox" >
+                     <label for="bastille">
+                        <i class="fas fa-heart"></i>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <form class="menu-select" method="POST">
+            <h2>ENTREES</h2>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="citrus-squid" type="checkbox" value="citrus-squid"
+                        name="entrees" />
+                    <div class="card-label__title">
+                        <h3>
+                            Citrus Squid Carpaccio
+                        </h3>
+                        <p>With southern French spices</p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">25€</span>
+                        <label class="select-button" for="citrus-squid">
+                            <i class="fas fa-check-circle"></i>
+                        </label>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="veg-soup" type="checkbox" value="veg-soup" name="entrees" />
+                    <div class="card-label__title">
+                        <h3>
+                            Grandmother's Vegetable Soup
+                        </h3>
+                        <p>Carrots, parsnips, Jerusalem artichoke</p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">25€</span>
+                        <label class="select-button" for="fricassee-dcitrus-squid">
+                            <i  class="fas fa-check-circle"></i>
+                        </label>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="onion-soup" type="checkbox" value="onion-soup"
+                        name="entrees" />
+                    <div class="card-label__title">
+                        <h3>
+                            Onion Soup
+                        </h3>
+                        <p>Revisted</p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">20€</span>
+                        <label class="select-button" for="onion-soup">
+                            <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </article>
+
+            <h2>MAIN DISHES</h2>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="scallops" type="checkbox" value="scallops"
+                        name="plats" />
+                    <div class="card-label__title">
+                        <h3>
+                            Scallops
+                        </h3>
+                        <p>With mashed parsnips
+                        </p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">40€</span>
+                        <label class="select-button" for="scallops">
+                            <i class="fas fa-check-circle"></i>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="magret-de-canard" type="checkbox"
+                        value="magret-de-canard" name="plats" />
+                    <div class="card-label__title">
+                        <h3>
+                            AMgret de canard
+                        </h3>
+                        <p>With Mashed Potatoes
+                        </p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">35€</span>
+                        <label class="select-button" for="magret-de-canard">
+                            <i class="fas fa-check-circle"></i>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="game-hen" type="checkbox" value="game-hen"
+                        name="plats" />
+                    <div class="card-label__title">
+                        <h3>
+                            Gamge Hen
+                        </h3>
+                        <p>With Vegetable Gnocchi
+                        </p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">44€</span>
+                        <label class="select-button" for="game-hen">
+                            <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </article>
+
+            <h2>DESSERTS</h2>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="napolean" type="checkbox" value="napolean" name="desserts" />
+                    <div class="card-label__title">
+                        <h3>
+                            Napolean
+                        </h3>
+                        <p>With Blueberries and marzipan</p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">18€</span>
+                        <label class="select-button" for="napolean">
+                            <i class="fas fa-check-circle"></i>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="floral-ice-cream" type="checkbox" value="floral-ice-cream"
+                        name="desserts" />
+                    <div class="card-label__title">
+                        <h3>
+                            Floral Ice Cream
+                        </h3>
+                        <p>With Hazelnut Butter
+                        </p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">22€</span>
+                        <label class="select-button" for="floral-ice-cream">
+                            <i class="fas fa-check-circle"></i>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-label">
+                    <input class="select-button" id="choco-lava-cake" type="checkbox" value="choco-lava-cake"
+                        name="desserts" />
+                    <div class="card-label__title">
+                        <h3>
+                            Chocolate Lava Cake
+                        </h3>
+                        <p>Revisted
+                        </p>
+                    </div>
+                    <div class="card-label__right-side">
+                        <span class="card-label__price">23€</span>
+                        <label class="select-button" for="choco-lava-cake">
+                            <i class="fas fa-check-circle"></i>
+
+                    </div>
+                </div>
+            </article>
+
+            <button class="button">Order</button>
+        </form>
+    </main>
+
+    <footer>
+        <nav>
+            <h2>ohmyfood</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-utensils"></i>
+                        Suggest a restaurant
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-hands-helping"></i>
+                        Become a partner
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-hands-helping"></i>
+                        Legal</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+.like-button {
+  input {
+    opacity: 0;
+    position: absolute;
+    left: -9999px;
+
+    + label {
+      filter: drop-shadow(0 0 1px black);
+      cursor: pointer;
+
+      i {
+        font-size: 20px;
+
+        background-color: white;
+        background: $gradient-tertiary;
+
+        background-position: top;
+        background-size: 400% 400%;
+
+        // `background-clip: text` is still experimental
+        -webkit-background-clip: text;
+        // `text-fill-color` is a non-standard feature
+        -webkit-text-fill-color: transparent;
+
+        transition: all 500ms ease 0ms;
+      }
+    }
+
+    + label i:hover {
+      background-color: $color-secondary;
+      background-position: 35% 35%;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:checked + label i {
+      background-color: $color-primary;
+      background-position: bottom;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      animation: inflate 250ms ease 0s forwards normal;
+    }
+
+    &:focus + label i,
+    &:hover + label i {
+      filter: drop-shadow(0 0 1px gray);
+    }
+  }
+}

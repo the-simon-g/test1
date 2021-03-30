@@ -1,0 +1,49 @@
+@mixin shadows($focus: true) {
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.13), 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  @if $focus {
+    &:hover,
+    &:focus,
+    &:focus-within {
+      // /!\ Browser performances
+      box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.23),
+        0 0.5px 5px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+@mixin display() {
+  padding: 53px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > * {
+    max-width: 740px;
+    width: 100%;
+  }
+}
+
+@mixin slidingInElement(
+  $iterations: 10,
+  $delay: 1,
+  $exceptionSelector: "",
+  $exceptionDuration: 0s
+) {
+  @for $i from 1 through $iterations {
+    &:nth-child(#{$i}) {
+      animation-name: slidingin;
+      animation-duration: 1s;
+      animation-delay: #{$i * 0.2 + $delay}s;
+      animation-fill-mode: both;
+    }
+    @if ($exceptionSelector != "") {
+      &:nth-child(#{$i}):not(#{$exceptionSelector}) {
+        animation-duration: $exceptionDuration;
+      }
+    }
+  }
+}

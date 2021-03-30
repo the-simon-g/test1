@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        ohmyfood
+    </title>
+
+    <base href="index.html" />
+    <link rel="stylesheet" type="text/css" href="styles/style.min.css" />
+    <script src="https://kit.fontawesome.com/949298e37f.js" ></script>
+
+    <meta charset="UTF-8" />
+    <meta name="title" content="ohmyfood" />
+    <meta name="description" content="Book the menu you like" />
+    <meta name="keywords" content="ohmyfood, restaurant, menu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="loader-container">
+        <span class="search-icon">
+            <i class="fas fa-redo-alt loader"></i>
+        </span>
+    </div>
+    <header class="page-header">
+        <a href="index.html">
+            <span class="logo">
+                ohmyfood
+            </span>
+        </a>
+    </header>
+
+    <main id="main-content">
+
+        <form class="location">
+            <span class="map-icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <button type="submit">
+                <span class="search-icon">
+                    <i class="fas fa-search" ></i>
+                </span>
+            </button>
+            <input type="search" name="city" autocomplete="on"
+                placeholder="Search here">
+        </form>
+
+        <header class="cover section--highlighted">
+            <h1>Book the menu you like</h1>
+            <p>Discover top-of-the-art restaurants we picked for you.</p>
+            <a href="#restaurants-list" class="button" >
+                Explore our restaurants
+            </a>
+        </header>
+
+        <section class="steps">
+            <h2>How it works</h2>
+            <ol>
+                <li class="card card--step">
+                    <i class="fas fa-mobile-alt step__icon"></i>
+                    <span class="step__label">Choose a restaurant</span>
+                </li>
+                <li class="card card--step">
+                    <i class="fas fa-list-ul step__icon"></i>
+                    <span class="step__label">Create your menu</span>
+                </li>
+                <li class="card card--step highlighted">
+                    <i class="fas fa-store step__icon"></i>
+                    <span class="step__label">Go enjoy it at the restaurant</span>
+                </li>
+            </ol>
+        </section>
+
+        <section id="restaurants-list" class="restaurants-list section--highlighted">
+            <h2>Restaurants</h2>
+
+            <article class="card">
+                <a href="the-full-pallette.html">
+                    <div class="image-container">
+                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                    </div>
+                    <div class="card-label">
+                        <div class="card-label__title">
+                            <h3>The Full Palette</h3>
+                            <p>New York</p>
+                        </div>
+                    </div>
+                    <span class="new-label">New</span>
+                </a>
+                <div class="like-button">
+                    <input id="the-full-pallette" type="checkbox" >
+                     <label for="the-full-pallette">
+                        <i class="fas fa-heart"></i>
+                    </label>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="the-enchanted-plate.html">
+                    <div class="image-container">
+                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                    </div>
+                    <div class="card-label">
+                        <div class="card-label__title">
+                            <h3>The Enchanted Plate</h3>
+                            <p>New York</p>
+                        </div>
+                    </div>
+                    <span class="new-label">New</span>
+                </a>
+                <div class="like-button">
+                    <input id="the-enchatned-plate" type="checkbox" >
+                     <label for="the-enchatned-plate">
+                        <i class="fas fa-heart"></i>
+                    </label>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="bastelle.html">
+                    <div class="image-container">
+                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                    </div>
+                    <div class="card-label">
+                        <div class="card-label__title">
+                            <h3>Bastille</h3>
+                            <p>New York</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="like-button">
+                    <input id="bastille" type="checkbox" >
+                     <label for="bastille">
+                        <i class="fas fa-heart"></i>
+                    </label>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="le-gourmand.html">
+                    <div class="image-container">
+                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                    </div>
+                    <div class="card-label">
+                        <div class="card-label__title">
+                            <h3>Le Gourmand</h3>
+                            <p>New York</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="like-button">
+                    <input id="le-gourmand" type="checkbox" >
+                     <label for="le-gourmand">
+                        <i class="fas fa-heart"></i>
+                    </label>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <nav>
+            <h2>ohmyfood</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-utensils"></i>
+                        Suggest a restaurant
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-hands-helping"></i>
+                        Become a partner
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-hands-helping"></i>
+                        Legal</a>
+                    
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+
+</body>
+
+</html>

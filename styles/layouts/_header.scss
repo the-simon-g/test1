@@ -1,0 +1,45 @@
+.page-header {
+  @include shadows(false);
+
+  position: relative;
+  margin: 0 auto;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    position: relative;
+
+    width: 100%;
+    max-width: 740px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      font-family: "Shrikhand", "Roboto", sans-serif;
+      font-size: 1.6em;
+    }
+
+    .back-to-homepage {
+      position: absolute;
+      left: 0;
+      margin-left: 20px;
+
+      i {
+        transition: all 250ms ease;
+      }
+
+      &:hover,
+      &:focus {
+        i {
+          transform: scale(1.5);
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

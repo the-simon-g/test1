@@ -1,0 +1,53 @@
+section.steps {
+  *:not(ol) {
+    @include slidingInElement($iterations: 3, $delay: 3);
+  }
+
+  ol {
+    padding: 0 0 0 12px;
+    margin: 0;
+    counter-reset: steps;
+
+    li.card {
+      @include shadows(false);
+      background-color: map-get($grey-levels, light);
+      padding: 27px 33px;
+      counter-increment: steps;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &:before {
+        content: counter(steps);
+        position: absolute;
+        left: -12px;
+        line-height: 24px;
+        width: 24px;
+
+        background: $color-primary;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+      }
+
+      &.highlighted {
+        background-color: lighten($color-primary, 35%);
+
+        .step__icon {
+          color: $color-primary;
+        }
+      }
+
+      .step__icon {
+        color: map-get($grey-levels, medium-dark);
+        margin-right: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        font-size: 19px;
+      }
+    }
+  }
+}

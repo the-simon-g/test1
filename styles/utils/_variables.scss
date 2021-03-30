@@ -1,0 +1,32 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+
+$gradient-primary: linear-gradient(
+  353deg,
+  $color-primary 0%,
+  $color-secondary 100%
+);
+
+$gradient-secondary: linear-gradient(
+  353deg,
+  $color-secondary 0%,
+  lighten($color-secondary, 6%) 100%
+);
+
+$gradient-tertiary: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 1) 0%,
+  rgba(255, 255, 255, 1) 25%,
+  rgba(255, 121, 218, 1) 25%,
+  rgba(147, 86, 220, 1) 75%,
+  rgba(147, 86, 220, 1) 85%,
+  rgba(212, 107, 219, 1) 100%
+);
+
+$grey-levels: (
+  light: #f6f6f6,
+  medium-light: #eaeaea,
+  medium-dark: #7e7e7e,
+  dark: #353535,
+);
