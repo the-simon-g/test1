@@ -739,7 +739,7 @@ label.select-button i {
 /*.menu-select article .card-label label i {
   box-shadow: 0px;
   border: 0;
-} If shadow needs to be added */
+} If shadow needs to be added*/
 .menu-select article input.select-button:checked + .card-label__title h3 i {
   transform: scale(1);
 }
